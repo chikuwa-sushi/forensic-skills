@@ -1,0 +1,23 @@
+# ===== ツールの取得元とハッシュ(scripts/setup.ps1 が使用) =====
+# 版を上げるときは URL と SHA256 を書き換えてコミットする。
+# ハッシュ確認: .\scripts\setup.ps1 -ShowHash -Force
+
+# --- CDIR-C(ハッシュ固定) ---
+CDIRC_URL=https://www.cyberdefense.jp/products/download/cdir-collector_1.3.7.zip
+CDIRC_SHA256=CC8664C934A26BF2EF7700DC728E5E18B699C70F78071818C167A59A971667F9
+
+# --- Eric Zimmerman Tools(.NET 10版) ---
+# URLに版が含まれず更新で中身が変わるため、ハッシュは既定で固定しない。
+# 固定する場合は EZ_SHA256_<ツール名>=<ハッシュ> を追加する。
+EZ_BASE_URL=https://download.ericzimmermanstools.com/net
+EZ_TOOLS=MFTECmd,PECmd,EvtxECmd,RECmd,AmcacheParser,AppCompatCacheParser,SBECmd,SrumECmd
+
+# --- NirSoft BrowserHistoryView(ブラウザ履歴。URLに版が含まれず更新で中身が変わるためハッシュは既定で固定しない）---
+BROWSERHISTORYVIEW_URL=https://www.nirsoft.net/utils/browsinghistoryview-x64.zip
+
+# --- NirSoft BrowserDownloadsView(ブラウザのダウンロード履歴）---
+BROWSERDOWNLOADSVIEW_URL=https://www.nirsoft.net/utils/browserdownloadsview-x64.zip
+
+# --- 7-Zip(view-vhdx 用。ハッシュ固定。単体版の 7za.exe は VHDX/ext4 非対応のため MSI から 7z.exe + 7z.dll を取り出す)---
+SEVENZIP_URL=https://www.7-zip.org/a/7z2606-x64.msi
+SEVENZIP_SHA256=6DC822569E777D9A3ECD5FFCBC22B55600AF87E6C5D9810A64E8566CF5A4AF9F

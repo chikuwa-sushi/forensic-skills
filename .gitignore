@@ -1,0 +1,12 @@
+# 端末ごとの設定
+.env
+.claude/settings.local.json
+
+# setup.ps1 が作るジャンクション(実体は .agents/skills)
+.claude/skills
+
+# ダウンロードしたツール
+tools/
+
+# Python 仮想環境
+.venv/

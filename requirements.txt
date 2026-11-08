@@ -1,0 +1,13 @@
+# Established Python tools run via .venv (setup.ps1 installs these).
+# Do NOT add packages here to support custom analysis scripts; use obtainable tools.
+
+# Local account hashes / LSA secrets from SAM+SYSTEM (impacket-secretsdump)
+impacket==0.12.0
+# impacket 0.12.0 imports pkg_resources (impacket/version.py); setuptools>=81 removed it
+setuptools==80.9.0
+# asyncore was removed from the stdlib in Python 3.12 (used by impacket kintercept.py)
+pyasyncore==1.0.5; python_version >= "3.12"
+# Not included: pcapy-ng (sniff.py / split.py). No Windows wheel; building needs Npcap SDK + MSVC.
+
+# Text extraction from evidence PDFs (read-only)
+pypdf==5.1.0

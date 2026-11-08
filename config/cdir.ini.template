@@ -1,0 +1,14 @@
+; scripts/Invoke-Cdirc.ps1 が {TARGET} {OUTPUT} を置換して cdir.ini を生成する
+; 全項目 true/false を明示すること(未定義だと実行時に入力を求められる)
+MemoryDump = false
+MFT = true
+Secure = true
+UsnJrnl = true
+EventLog = true
+Prefetch = true
+Registry = true
+WMI = true
+SRUM = true
+Web = true
+Target = {TARGET}
+Output = {OUTPUT}
